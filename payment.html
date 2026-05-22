@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Deposit</title>
+    <style>
+        input {
+            color: green;
+            font-weight: bold;
+            font-size:2em;
+        }
+    </style>
+    <link rel="stylesheet" href="https://eliyasande65-lang.github.io/Pingwrites/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="sidebar" id="sidebar">
+            <div class="space"></div>
+            <div class="logo"><img id="logo" src="https://eliyasande65-lang.github.io/Pingwrites/logo.png" alt="logo" /></div>
+
+            <ul class="nav-links">
+                <li><a href="https://eliyasande65-lang.github.io/Pingwrites/home.html">Home</a></li>
+                <li><a href="https://eliyasande65-lang.github.io/Pingwrites/dashboard.html">Dashboard</a></li>
+                <li><a href="https://eliyasande65-lang.github.io/Pingwrites/profile.html">Profile</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+
+            <button class="menu-btn"id="menu" onclick="toggleSidebar()">
+                ☰ Menu
+            </button>
+            <div class="space"></div>
+            <div class="card">
+                <h1>Seller Deposit Fee</h1>
+
+                <p>
+                    Before uploading your creative work, a 40% publishing fee
+                    based on your selling price must be paid.
+                </p>
+
+                <input type="text" id="sellingPrice" placeholder="Enter Selling Price">
+
+                <button onclick="calculateFee()">Calculate Fee</button>
+
+                <div class="card">
+                    <h2>Payment Summary</h2>
+
+                    <p id="feeDisplay">Publishing Fee: Not yet calculated</p>
+                    <p id="remainingDisplay">Your Remaining Earnings: Not yet calculated</p>
+
+                    <button>
+                        Continue To STK Deposit
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function calculateFee(){
+                
+        let fee = price * 0.25;
+        let remaining = price - fee;
+
+        document.getElementById("feeDisplay").innerHTML =
+        "Publishing Fee: Ksh. " + fee;
+
+        document.getElementById("remainingDisplay").innerHTML =
+        "Your Remaining Earnings: Ksh." + remaining;
+        }
+
+    </script>
+    <script>
+        const price=localStorage.getItem('price');
+        console.log(price);
+        const mon=document.getElementById('sellingPrice').value
+        document.getElementById('sellingPrice').value=`Ksh. ${price}`;
+        
+        document.getElementById('sellingPrice').readOnly='true';
+        
+    </script>
+    <script src="https://eliyasande65-lang.github.io/Pingwrites/script.js"></script>
+</body>
+</html>

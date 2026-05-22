@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Creative Work</title>
+    
+    <link rel="stylesheet" href="https://eliyasande65-lang.github.io/Pingwrites/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="sidebar" id="sidebar">
+            <div class="space"></div>
+            <div class="logo"><img id="logo" src="https://eliyasande65-lang.github.io/Pingwrites/logo.png" alt="logo" /></div>
+
+            <ul class="nav-links">
+                <li><a href="https://eliyasande65-lang.github.io/Pingwrites/home.html">Home</a></li>
+                <li><a href="https://eliyasande65-lang.github.io/Pingwrites/dashboard.html">Dashboard</a></li>
+                <li><a href="https://eliyasande65-lang.github.io/Pingwrites/payment.html">Deposit Fee</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+
+            <button class="menu-btn"id="menu" onclick="toggleSidebar()">
+                ☰ Menu
+            </button>
+            <div class="space"></div>
+            <div class="card">
+                <h1>Upload Creative Content</h1>
+
+                <form>
+
+                    <input type="text" placeholder="Title">
+                    <textarea placeholder="Description"></textarea>
+                    <input type="number" id="setprice" placeholder="Selling Price">
+                    <input type="file">
+                    
+                    <button id="sub" type="submit">Submit Upload</button>
+                    
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://eliyasande65-lang.github.io/Pingwrites/script.js"></script>
+    <script>
+        document.getElementById('sub').addEventListener('click', function(e){   
+            e.preventDefault();
+            window.location.href='https://eliyasande65-lang.github.io/Pingwrites/payment.html';
+        });
+
+        document.getElementById('setprice').addEventListener('input', function(){
+            const setprice=document.getElementById('setprice').value;
+            localStorage.setItem('price', setprice);
+        });
+        
+        
+    </script>
+</body>
+</html>

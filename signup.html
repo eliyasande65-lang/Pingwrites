@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        button:disabled{
+            background-color:grey;
+            cursor:not-allowed;
+        }
+        #spfeed{
+            color:red;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="sidebar" id="sidebar">
+            <div class="logo"><img id="logo" src="https://eliyasande65-lang.github.io/Pingwrites/logo.png" alt="logo" /></div>
+
+            <ul class="nav-links">
+                <li><a href="https://eliyasande65-lang.github.io/Pingwrites/home.html">Home</a></li>
+                <li><a href="https://eliyasande65-lang.github.io/Pingwrites/login.html">Login</a></li>
+                <li><a href="https://eliyasande65-lang.github.io/Pingwrites/about.html">About</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+
+            <div class="space"></div>
+            <div class="logo"><img id="logo" src="https://eliyasande65-lang.github.io/Pingwrites/logo.png" alt="logo" /></div>
+            <div class="card">
+                <h1>Create Account</h1>
+
+                <form>
+                    <input type="text" id="names" placeholder="Username">
+                    <input type="email" id="email" placeholder="Email">
+                    <input type="password" id="pass" placeholder="Password">
+                    <input type="password" id="pass1" placeholder="Confirm Password" />
+                    <p id="spfeed"></p>
+                    <button id="signupbtn" disabled>Signup</button>
+                    <p>Don't have an account? '</p><a href="https://eliyasande65-lang.github.io/Pingwrites/login.html">Login</a>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        document.getElementById("signupbtn").addEventListener('click', function(event){
+	        event.preventDefault();
+	        let key=document.getElementById("pass").value;
+	        let confirm=document.getElementById("pass1").value;
+	        if (key==confirm){
+		        window.location.href="https://eliyasande65-lang.github.io/Pingwrites/home.html";
+	        }
+	        else if(key===""){
+		        document.getElementById("spfeed").innerHTML="Please fill in the password";
+	        }
+	        else {
+		        document.getElementById("spfeed").innerHTML="‼️Password Mismatch";
+	        }
+        });
+
+        const pask=document.getElementById("pass");
+        const name=document.getElementById("names");
+        const email=document.getElementById("email");
+        const pask1=document.getElementById("pass1");
+        const btn=document.getElementById("signupbtn");
+
+        
+        function inputchecks(){
+            
+
+            const paskvalid=pask.value.trim() !=="";
+            const namevalid=name.value.trim() !=="";
+            const emailvalid=email.value.trim() !=="";
+            const confirmvalid=pask1.value.trim() !=="";
+        
+            btn.disabled=!(paskvalid && namevalid && emailvalid && confirmvalid);
+        }  
+        pask.addEventListener('input', inputchecks);
+        name.addEventListener('input', inputchecks);
+        email.addEventListener('input', inputchecks);
+        pask1.addEventListener('input', inputchecks);
+
+                    
+    </script>
+    <script src="https://eliyasande65-lang.github.io/Pingwrites/hydrasec"></script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Support Complaints</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="sidebar" id="sidebar">
+            <div class="space"></div>
+            <div class="logo"><img id="logo" src="logo.png" alt="logo"/> </div>
+
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+
+            <button class="menu-btn" onclick="toggleSidebar()">
+                ☰ Menu
+            </button>
+            <div class="space"></div>
+            <div class="card">
+                <h1>Customer Complaints & Support</h1>
+
+                <p>
+                    Send complaints, report users, request help,
+                    or contact platform administrators.
+                </p>
+
+                <form>
+
+                    <input type="text" placeholder="Complaint Subject">
+
+                    <textarea placeholder="Explain your issue or complaint here..."></textarea>
+
+                    <button>
+                        Send Complaint
+                    </button>
+
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Recent Support Responses</h2>
+
+                <div class="card">
+                    <h3>Support Team</h3>
+                    <p>
+                        Your publication verification request is under review.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Support Team</h3>
+                    <p>
+                        Payment issue successfully resolved.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

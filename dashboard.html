@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://eliyasande65-lang.github.io/Pingwrites/style.css">
+    <script src="https://eliyasande65-lang.github.io/Pingwrites/script.js"></script>
+</head>
+<body>
+
+    <div class="container">
+       
+        <div class="sidebar" id="sidebar">
+            <div class="space"></div>
+            <div class="logo"><img id="logo" src="https://eliyasande65-lang.github.io/Pingwrites/logo.png" alt="logo" /></div>
+
+            <ul class="nav-links">
+                <li><a href="https://eliyasande65-lang.github.io/Pingwrites/home.html">Home</a></li>
+                <li><a href="https://eliyasande65-lang.github.io/Pingwrites/profile.html">Profile</a></li>
+                <li><a href="https://eliyasande65-lang.github.io/Pingwrites/chattous.html">Chats</a></li>
+                <li><a href="https://eliyasande65-lang.github.io/Pingwrites/about.html">About</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+
+            <button class="menu-btn" id="menu" onclick="toggleSidebar()">
+                ☰ Menu
+            </button>
+            <div class="space"></div>
+            <div class="topbar">
+                <h1>Dashboard</h1>
+                <a href="https://eliyasande65-lang.github.io/Pingwrites/upload.html">
+                    <button>Upload Content</button>
+                </a>
+            </div>
+
+            <div class="grid">
+
+                <div class="card">
+                    <h2>Total Sales</h2>
+                    <h1 id="balance"></h1>
+                </div>
+
+                <div class="card">
+                    <h2>Products Uploaded</h2>
+                    <h1>24</h1>
+                </div>
+
+                <div class="card">
+                    <h2>Followers</h2>
+                    <h1>1,340</h1>
+                </div>
+
+            </div>
+
+            <div class="popup" id="popup">
+                <div class="popup-content">
+                    <h2>Upload Creative Work</h2>
+
+                    <input type="text" placeholder="Title">
+                    <textarea placeholder="Description"></textarea>
+                    <input type="file">
+
+                    <button>Upload</button>
+                    <button onclick="closePopup()">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://eliyasande65-lang.github.io/Pingwrites/monb.js"></script>
+</body>
+</html>
